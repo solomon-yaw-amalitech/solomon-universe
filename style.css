@@ -1,0 +1,376 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "evosans thin";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Thin__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans thin alt";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Thin_EVO__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans light";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Light__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans light alt";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Light_EVO__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans regular";
+  src: url("https://https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Regular__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans regular alt";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Regular_EVO__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans medium";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Medium__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans medium alt";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Medium_EVO__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans bold";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Bold__PERSONAL_USE_.otf");
+}
+@font-face {
+  font-family: "evosans bold alt";
+  src: url("https://files.jcink.net/uploads2/codepenfonts/MADE_Evolve_Sans_Bold_EVO__PERSONAL_USE_.otf");
+}
+:root {
+  --evosans-t: "evosans thin";
+  --evosans-talt: "evosans thin alt";
+  --evosans-l: "evosans light";
+  --evosans-lalt: "evosans light alt";
+  --evosans-r: "evosans regular";
+  --evosans-ralt: "evosans regular alt";
+  --evosans-m: "evosans medium";
+  --evosans-malt: "evosans medium alt";
+  --evosans-b: "evosans bold";
+  --evosans-balt: "evosans bold alt";
+  --archivo-narrow: "Archivo Narrow", sans-serif;
+  --source-sans-pro: "Source Sans Pro", sans-serif;
+  --ibm-plex-sans: "IBM Plex Sans", sans-serif;
+
+  --grey: #5a5a5a;
+  --white: #ffffff;
+  --black: #000000;
+  --accent: #1da4ef;
+
+  --planetbg-1: url(https://www.solarsystemscope.com/textures/download/2k_jupiter.jpg)
+    0 / auto 100%;
+  --planetbg-2: url(https://i.redd.it/95h5fep84bz41.jpg) 0 / auto 100%;
+  --planetbg-3: url(https://www.solarsystemscope.com/textures/download/4k_eris_fictional.jpg)
+    0 / auto 100%;
+  --planetbg-4: url(https://i.imgur.com/yYz0b.jpg) 0 / auto 100%;
+  --planetbg-5: url(https://www.solarsystemscope.com/textures/download/4k_makemake_fictional.jpg)
+    0 / auto 100%;
+}
+
+body {
+  font: 1.2rem var(--source-sans-pro);
+  color: var(--white);
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  padding: 50px;
+  position: relative;
+  background-image: url(https://cdn.wallpapersafari.com/20/80/jQPMT3.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+}
+::-webkit-scrollbar {
+  width: 1px;
+  background: #5a5a5a;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #07a4ef;
+  height: auto;
+  padding: 2px;
+}
+a:link,
+a:visited,
+a:active {
+  font-family: var(--archivo-narrow);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+.idx-maintitle {
+  text-align: left;
+  border-bottom: 1px solid var(--grey);
+}
+.idx-maintitle a {
+  border-bottom: solid 3px var(--grey);
+  color: var(--white);
+  font: 4rem var(--evosans-talt);
+  letter-spacing: 1.2rem;
+}
+.idx-maintitle span::before {
+  display: inline;
+  content: "brave new worlds";
+  color: var(--grey);
+  font: 2rem var(--evosans-b);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.planets-container {
+  display: block;
+  width: 100%;
+  height: 461px;
+  position: relative;
+  border: 1px solid var(--grey);
+  overflow: hidden;
+  background: var(--black);
+  color: var(--white);
+  margin-top: 20px;
+}
+.planet-tabs {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid var(--grey);
+  position: relative;
+  z-index: 3;
+  background: var(--black);
+}
+.planets-container input {
+  display: none;
+}
+.planets-container label {
+  position: absolute;
+  --labelwidth: 20%;
+  width: var(--labelwidth);
+  height: 60px;
+  top: 0px;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  font-family: var(--source-sans-pro);
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  border-right: 1px solid var(--grey);
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+label planet {
+  display: block;
+  --planetsize: 50px;
+  width: var(--planetsize);
+  height: var(--planetsize);
+  box-shadow: inset 16px 0 20px 3px rgb(0 0 0 / 90%),
+    inset -3px 0 5px 2px rgb(255 255 255 / 16%);
+  background-size: 240px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  animation: spin 30s linear infinite;
+}
+label span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding-left: 20px;
+}
+@keyframes spin {
+  to {
+    background-position: 200% 0;
+  }
+}
+#solar-system {
+  height: 400px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#star-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 1;
+}
+#solar-pos {
+  position: relative;
+  z-index: 2;
+}
+.planet-shape {
+  display: block;
+  --planetsize: 320px;
+  width: var(--planetsize);
+  height: var(--planetsize);
+  box-shadow: inset 16px 0 20px 3px rgb(0 0 0 / 90%),
+    inset -3px 0 5px 2px rgb(255 255 255 / 16%),
+    -10px 0 20px 3px rgb(0 0 0 / 90%);
+  background-size: 240px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+  animation: spin 30s linear infinite;
+  transition: all ease 0.7s;
+}
+.planet-info {
+  position: absolute;
+  z-index: 3;
+  width: 400px;
+  height: 399px;
+  background-image: linear-gradient(-90deg, black 60%, transparent 100%);
+  right: -400px;
+  text-align: right;
+  padding: 20px;
+  transition: all ease 0.7s;
+}
+.planet-name {
+  border-bottom: 1px solid var(--grey);
+  padding-bottom: 10px;
+}
+.planet-name a {
+  font: 2rem var(--evosans-malt);
+  letter-spacing: 0.2rem;
+  color: var(--accent);
+}
+.planet-description {
+  padding: 0px 10px;
+  line-height: 150%;
+  letter-spacing: 0.05rem;
+  height: 200px;
+  overflow: auto;
+  margin: 20px 0;
+}
+.planet-last {
+  border-top: 1px solid var(--grey);
+  padding-top: 10px;
+  text-transform: uppercase;
+  font: 1rem var(--source-sans-pro);
+  letter-spacing: 0.2rem;
+}
+.planet-last a {
+  color: var(--accent);
+}
+.planet-last div {
+  margin-bottom: 10px;
+}
+
+/** label specific styles **/
+label#planet1 {
+  left: calc(var(--labelwidth) * 0);
+}
+label#planet2 {
+  left: calc(var(--labelwidth) * 1);
+}
+label#planet3 {
+  left: calc(var(--labelwidth) * 2);
+}
+label#planet4 {
+  left: calc(var(--labelwidth) * 3);
+}
+label#planet5 {
+  left: calc(var(--labelwidth) * 4);
+  border-right: none;
+}
+
+label#planet1 planet {
+  background: var(--planetbg-1);
+}
+label#planet2 planet {
+  background: var(--planetbg-2);
+}
+label#planet3 planet {
+  background: var(--planetbg-3);
+}
+label#planet4 planet {
+  background: var(--planetbg-4);
+}
+label#planet5 planet {
+  background: var(--planetbg-5);
+}
+
+/** large planet specific styles **/
+#solar-pos planet#planet1 {
+  background: var(--planetbg-1);
+  transform: scale(0.2);
+  top: -70px;
+  left: -80px;
+}
+#solar-pos planet#planet2 {
+  background: var(--planetbg-2);
+  transform: scale(0.4);
+  left: 400px;
+  top: -50px;
+}
+#solar-pos planet#planet3 {
+  background: var(--planetbg-3);
+  transform: scale(0.33);
+  left: 300px;
+  top: 220px;
+}
+#solar-pos planet#planet4 {
+  background: var(--planetbg-4);
+  transform: scale(0.78);
+  left: 400px;
+  top: 35px;
+}
+#solar-pos planet#planet5 {
+  background: var(--planetbg-5);
+  transform: scale(0.72);
+  left: -35px;
+  top: 200px;
+}
+
+/** input checked styles **/
+input#planet1:checked ~ #solar-system #solar-pos #planet1,
+input#planet2:checked ~ #solar-system #solar-pos #planet2,
+input#planet3:checked ~ #solar-system #solar-pos #planet3,
+input#planet4:checked ~ #solar-system #solar-pos #planet4,
+input#planet5:checked ~ #solar-system #solar-pos #planet5 {
+  transform: scale(1.5);
+  z-index: 2;
+  top: 40px;
+  left: 40px;
+}
+input#planet1:checked ~ #solar-system #solar-pos #planet-info-1,
+input#planet2:checked ~ #solar-system #solar-pos #planet-info-2,
+input#planet3:checked ~ #solar-system #solar-pos #planet-info-3,
+input#planet4:checked ~ #solar-system #solar-pos #planet-info-4,
+input#planet5:checked ~ #solar-system #solar-pos #planet-info-5 {
+  right: 0px;
+}
+
+.solo {
+  width: 20%;
+  height: 20%;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description-2 {
+  margin: 10px 30px 10px 30px;
+}
