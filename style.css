@@ -490,15 +490,19 @@ input#planet5:checked ~ #solar-system #solar-pos #planet-info-5 {
 .btn-3:hover {
   background: rgb(23, 122, 215);
   box-shadow: none;
+  transition: all 0.7s;
 }
 .btn-3:hover:before {
   height: 100%;
+  transition: all 0.7s;
 }
 .btn-3:hover:after {
   width: 100%;
+  transition: all 0.7s;
 }
 .btn-3 span:hover {
   color: rgba(2, 126, 251, 1);
+  transition: all 0.7s;
 }
 .btn-3 span:before,
 .btn-3 span:after {
