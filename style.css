@@ -376,6 +376,7 @@ input#planet5:checked ~ #solar-system #solar-pos #planet-info-5 {
   font-size: 25px;
   font-family: "Lato", sans-serif;
   margin-left: 25px;
+  font-weight: 100;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
