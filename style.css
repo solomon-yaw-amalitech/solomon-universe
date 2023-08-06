@@ -364,6 +364,7 @@ input#planet5:checked ~ #solar-system #solar-pos #planet-info-5 {
 .solo {
   width: 20%;
   height: 20%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .description {
@@ -381,7 +382,7 @@ input#planet5:checked ~ #solar-system #solar-pos #planet-info-5 {
   }
 
   .solo-logo {
-    width: 200px;
+    width: 130px;
     height: 100px;
   }
 
@@ -391,11 +392,30 @@ input#planet5:checked ~ #solar-system #solar-pos #planet-info-5 {
   }
   .message {
     height: auto;
+    width: 360px;
+  }
+  .planets-container {
+    width: 350px;
+    overflow: visible;
+  }
+
+  .planet-description {
+  }
+
+  .david {
+    width: 300px;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+  .cat-title1 {
+    font-size: 10px;
   }
 }
 
 .description-2 {
-  margin: 10px 30px 10px 30px;
+  margin: 10px 10px 10px 10px;
+}
+.planets-container {
 }
 
 .custom-btn {
