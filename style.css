@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  /**scroll-behavior: smooth;*/
   font-size: 62.5%;
 }
 * {
@@ -394,10 +394,11 @@ input#planet5:checked ~ #solar-system #solar-pos #planet-info-5 {
   }
 
   .title {
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
+    font-weight: 700;
   }
   .message {
     height: auto;
